@@ -1,0 +1,157 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+}
+
+body {
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    background: #79a8ae;
+    color: #CFEBE4;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    margin: 0;
+}
+.body--ready {
+    background: black;
+}
+
+#rainCanvas, .canvas {
+z-index: 1;
+}
+
+#fireCanvas {
+    z-index: 3;
+    display: none;
+}
+
+
+/* ==== TET CARD ==== */
+#tetCardWrapper{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:60%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    pointer-events:auto;
+    opacity:0;
+    transition:opacity 2s ease;
+}
+
+.book{
+    width:350px;
+    height:500px;
+    position:relative;
+    perspective:1500px;
+}
+
+.cover{
+    width:100%;
+    height:100%;
+    background:#d40000;
+    color:gold;
+    border-radius:15px;
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transform-origin:left;
+    transition:transform 1s ease;
+    box-shadow:0 0 25px rgba(255,215,0,0.6);
+}
+
+.cover h1{ margin:0; font-size:30px; }
+.cover h2{ margin:10px 0; font-size:26px; }
+
+.inside{
+    width:100%;
+    height:100%;
+    background:#fff5e6;
+    border-radius:15px;
+    position:absolute;
+    padding:40px;
+    box-sizing:border-box;
+    text-align:center;
+    color:#b30000;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+.inside h2{ color:#d40000; }
+
+.book.open .cover{
+    transform:rotateY(-180deg);
+}
+
+.close-btn{
+    margin-top:20px;
+    padding:8px 20px;
+    border:none;
+    border-radius:20px;
+    background:#d40000;
+    color:white;
+    cursor:pointer;
+}
+
+.close-btn:hover{
+    background:#990000;
+}
+
+/* ===== START FORM FULLSCREEN ===== */
+
+.start-form{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(135deg,#8b0000,#d40000);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.form-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 30px rgba(0,0,0,0.4);
+}
+
+.form-box input{
+    padding:10px;
+    width:250px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    margin:15px 0;
+}
+
+.form-box button{
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#d40000;
+    color:white;
+    cursor:pointer;
+}
+
+.form-box button:hover{
+    background:#990000;
+}
+
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}

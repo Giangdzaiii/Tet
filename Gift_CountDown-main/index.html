@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Happy New Year 2026</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <!-- FORM NHẬP TÊN FULL MÀN HÌNH -->
+    <div id="startForm" class="start-form">
+        <div class="form-box">
+            <h2>🎉 Nhập tên của bạn 🎉</h2>
+            <input type="text" id="usernameInput" placeholder="Nhập tên của bạn..." />
+            <button onclick="startExperience()">Bắt đầu</button>
+        </div>
+    </div>
+    <canvas id="rainCanvas"></canvas>
+    <canvas class="canvas"></canvas>
+    <canvas id="fireCanvas"></canvas>
+    <audio id="sound" loop playsinline>
+        <source src="./style/nhac.mp3" type="audio/mpeg" />
+    </audio>
+    <!-- THIỆP TẾT -->
+    <div id="tetCardWrapper" style="display:none;">
+
+    <!-- FORM NHẬP TÊN -->
+    <div class="book" id="book">
+
+            
+            <div class="inside">
+                <h2>🌸 Chúc Mừng Năm Mới 🌸</h2>
+                <p id="tetMessage"></p>
+                <button class="close-btn" onclick="closeBook()">Đóng lại</button>
+            </div>
+
+            <div class="cover" onclick="openBook()">
+                <h1>CHÚC MỪNG</h1>
+                <h2>TẾT ÂM LỊCH</h2>
+                <p>Nhấn để mở thiệp</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./style/script/rain.js"></script>
+    <script src="./style/script/fire.js"></script>
+</body>
