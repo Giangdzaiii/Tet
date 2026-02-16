@@ -42,7 +42,7 @@ var S = {
         S.Drawing.init('.canvas');
         document.body.classList.add('body--ready');
         S.UI.simulate(
-          "#countdown 3|HAPPY|NEW YEAR|Bae Moon|❤️");
+          "#countdown 3|HAPPY|NEW YEAR|2026|❤️");
         S.Drawing.loop(function () {
             S.Shape.render();
         });
@@ -653,10 +653,7 @@ function showPersonalizedMessage(){
     let specialMessage = tetMessages[nick] || tetMessages["default"];
 
     messageBox.innerHTML = `
-        Chúc <b>${name}</b> một năm mới<br><br>
         <b>${specialMessage}</b><br><br>
-        Yêu thương ngập tràn ❤️<br>
-        Hạnh phúc sum vầy 🎉
     `;
 }
 
@@ -675,8 +672,33 @@ function generateNickName(fullName){
 }
 
 const tetMessages = {
+    nmh: "Chúc cậu một năm mới vui vẻ,nhiều sức khỏe và may mắn,học tập tốt,vấn đáp không ngán một ai,kì tới tiếp tục đạt học bổng nhé 🌸🌸🌸",
     phg: "Năm mới phát tài phát lộc, thành công rực rỡ 🎆",
-    dhs: "Chúc bạn Sơn năm mới vui vẻ và hạnh phúc 🎉",
+    lap: "Chúc cậu năm mới vui vẻ,nhiều sức khỏe,gặp nhiều may mắn ,tình yêu với châu bền chặt như keo sơn,bên nhau trọn đời và tiếp tục đồng hành cùng tớ🎉",
+    ntmc:"Chúc Châu năm mới vui vẻ,nhiều sức khỏe,nhiều may mắn,làm ăn phát đạt để bao nuôi phương,tiếp tục làm quân sư cho Giang đến khi nào cưới vợ thì thôi :d :d :d  ",
+    dhs: "Chúc chú năm mới học tốt học tốt học tốt học tốt học tốt học tốt học tốt học tốt học tốt học tốt học tốt học tốt học tốt học tốt học tốt.Hôm trước nhậu chú bảo chúc chú học tốt là đủ 🎉",
+    ntko:"Chúc mẹ con năm mới vui vẻ,mạnh khỏe,nhiều sức khỏe và may mắn,có khách thuê nhà 🌸🌸🌸",
+    phm:"Con chúc bố năm mới vui vẻ,mạnh khỏe,nhiều sức khỏe và may mắn, học sinh năm mới gấp 5 lần năm cũ,đánh golf trận nào thắng trận đó để có tiền mua bia và nịnh mẹ con 🌸🌸🌸",
+    phs:"Em chúc anh năm mới vui vẻ,mạnh khỏe,nhiều sức khỏe và may mắn,công việc thành công thuận lời,có nhiều tiền để mua sữa cho cháu và uống bia có giờ giấc hơn 🌸🌸🌸",
+    nhtn:"Em chúc chị năm mới vui vẻ,mạnh khỏe,nhiều sức khỏe về cả tinh thần và thể chất để chăm cháu ROSE,có công việc mới để cuối năm đưa bố mẹ đi SingaPore 🌸🌸🌸",
+    nbm:"Chúc chú năm mới vui vẻ,mạnh khỏe,may mắn,học tập tốt và mọi điều thuận lợi🌸🌸🌸",
+    lms:"Chúc chú năm mới vui vẻ,mạnh khỏe,may mắn,học tập tốt,tự tin hơn để có người yêu và anh em mình cứ rứa thôi chú nhể 🌸🌸🌸",
+    nvh:"Chúc chú năm mới vui vẻ,mạnh khỏe,may mắn,học tập tốt và anh em mình năm sau làm chuyến nữa chú nhể 🌸🌸🌸",
+    nvd:"Chúc chú năm mới vui vẻ,mạnh khỏe,may mắn,học tập tốt,ra hà nội gặp nhau nhiều hơn nhé chú 🌸🌸🌸",
+    npd:"Chúc chú năm mới vui vẻ,mạnh khỏe,may mắn,học tập tốt,tình yêu lâu bền,trăm năm hạnh phúc và anh em mình cứ rứa thôi chú nhể 🌸🌸🌸",
+    lmh:"Chúc bạn t năm mới vui vẻ,mạnh khỏe,học tập tốt để ra trường thống trị nền kinh tế miền bắc và tình yêu lâu dài nhé 🌸🌸🌸",
+    dvm:"Chúc m năm mới vui vẻ,mạnh khỏe,may mắn,học tập tốt để ra trường làm chủ toàn bộ ngân hàng thanh hóa và năm mới gặp t nhiều hơn năm cũ🌸🌸🌸",
+    lhh:"Chúc m năm mới vui vẻ,gặp nhiều may mắn,học tập tốt,mạnh khỏe,nhiều sức khỏe để đánh pick cùng t nhá!!!",
+    ttk:"Chúc khang năm mới vui vẻ,gặp nhiều may mắn,học tập tốt mạnh khỏe,nhiều sức khỏe để đánh pick cùng t nhá",
+    pts:"Chúc m năm mới vui vẻ,mạnh khỏe,may mắn,học tập tốt và kênh youtube sớm có video đầu 🌸🌸🌸",
+    nvv:"Chúc bạn năm mới vui vẻ,mạnh khỏe,học tập tốt đạt nhiều A để được học bổng,tình yêu mãi bền lâu nhaaaa",
+    ha:"Chúc em năm mới vui vẻ,mạnh khỏe,may mắn,học tập tốt để đạt IELTS 7.0 và anh em mình cứ thế thôi hẹ hẹ 🌸🌸🌸",
+    th:"Chúc em năm mới vui vẻ,mạnh khỏe,may mắn,học tập tốt và anh em mình cứ thế thôi hẹ hẹ 🌸🌸🌸",
+    ptlv:"Chúc chú năm mới vui vẻ,gặp nhiều may mắn,mạnh khỏe,nhiều sức khỏe để hết bệnh tất đau ốm và anh em mình cứ thế thôi hẹ hẹ 🌸🌸🌸",
+    ntl:"Chúc Lâm một năm mới vui vẻ,mạnh khỏe,nhiều sức khỏe,học tập tốt để năm kì này đớp tiếp cái học bổng và đồng hành cùng giang trong những dự án sắp tới nhaaaa 🌸🌸🌸",
+    ppd:"Chúc đối thủ của t năm mới vui vẻ,gặp nhiều may mắn,mạnh khỏe,bớt lười học và đồng hành cùng t trong những dự án sắp tới nhaaa 🌸🌸🌸",
+    nmd:"Chúc đức năm mới vui vẻ,mạnh khỏe,nhiều sức khỏe,học tập tốt để đạt full A và tình yêu lâu bền nhaaaa 🌸🌸🌸",
+
     default: "An Khang - Thịnh Vượng - Vạn Sự Như Ý 🌸"
 };
 
